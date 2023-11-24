@@ -8,7 +8,7 @@ function Navbar() {
   osea un componente que englobe todo y ese componente va a tener los datos de la session, hay
   que englobar las paginas dentro de ese componente, y lo hacemos en el layout */
   const { data: session } = useSession();
-  console.log(session);
+  /* console.log(session); */
 
   return (
     <nav className="bg-slate-900 flex items-center py-3 justify-between px-24 text-white">
@@ -27,8 +27,10 @@ function Navbar() {
             className="w-10 h-10 rounded-full cursor-pointer"
           />
           <button
-            onClick={() => {
-              signOut();
+            onClick={async () => {
+              await signOut({
+                callbackUrl: '/',
+              });
             }}
           >
             {' '}
