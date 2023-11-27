@@ -39,7 +39,7 @@ function Navbar() {
         </div>
       ) : (
         <button
-          onClick={() => signIn()}
+          onClick={() => signIn('google')}
           className="bg-sky-400 px-3 py-2 rounded"
         >
           Iniciar Sesión
