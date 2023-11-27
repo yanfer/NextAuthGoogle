@@ -23,7 +23,7 @@ function Navbar() {
           </p>
           <img
             src={session.user.image!}
-            alt=""
+            referrerPolicy="no-referrer"
             className="w-10 h-10 rounded-full cursor-pointer"
           />
           <button
